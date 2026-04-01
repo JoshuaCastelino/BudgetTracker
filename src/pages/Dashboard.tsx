@@ -2,7 +2,6 @@ import { useStore } from '../store';
 import { CATEGORY_COLORS } from '../constants';
 import type { Category } from '../types';
 import CategoryCard from '../components/CategoryCard';
-import SpendingPieChart from '../components/SpendingPieChart';
 
 export default function Dashboard() {
   const { budgets, getCategorySpending, totalSpending } = useStore();
@@ -39,8 +38,6 @@ export default function Dashboard() {
           );
         })}
       </div>
-
-      <SpendingPieChart data={pieData} total={totalSpending} />
     </div>
   );
 }
