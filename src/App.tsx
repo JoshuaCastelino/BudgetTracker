@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useStore } from './store';
 import Dashboard from './pages/Dashboard';
 import TransactionHistory from './pages/TransactionHistory';
+import UploadPage from './pages/UploadPage';
 import { DollarSign, LayoutDashboard, Clock, Upload } from 'lucide-react';
 
 type Tab = 'dashboard' | 'history' | 'upload';
@@ -73,6 +74,7 @@ function AppContent() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {activeTab === 'dashboard' && <Dashboard />}
         {activeTab === 'history' && <TransactionHistory />}
+        {activeTab === 'upload' && <UploadPage />}
       </main>
     </div>
   );
