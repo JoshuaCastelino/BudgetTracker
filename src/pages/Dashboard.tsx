@@ -1,19 +1,10 @@
 import { useStore } from '../store';
-import { CATEGORY_COLORS } from '../constants';
-import type { Category } from '../types';
 import CategoryCard from '../components/CategoryCard';
 
 export default function Dashboard() {
-  const { budgets, getCategorySpending, totalSpending } = useStore();
+  const { budgets, getCategorySpending, } = useStore();
   const spending = getCategorySpending();
 
-  const pieData = budgets
-    .map(b => ({
-      name: b.category,
-      value: Math.round((spending[b.category] || 0) * 100) / 100,
-      color: CATEGORY_COLORS[b.category as Category],
-    }))
-    .filter(d => d.value > 0);
 
   return (
     <div className="space-y-8">
