@@ -1,6 +1,0 @@
-@BudgetTracker.Api_HostAddress = http://localhost:5145
-
-GET {{BudgetTracker.Api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
